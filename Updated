@@ -1,0 +1,121 @@
+ $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$\        $$$$$$\  $$\   $$\ $$$$$$\ $$$$$$$\         $$$$$$\ $$\     $$\  $$$$$$\ $$$$$$$$\ $$$$$$$$\ $$\      $$\ 
+$$  __$$\ $$$\  $$ |\__$$  __|\_$$  _|      $$  __$$\ $$ | $$  |\_$$  _|$$  __$$\       $$  __$$\\$$\   $$  |$$  __$$\\__$$  __|$$  _____|$$$\    $$$ |
+$$ /  $$ |$$$$\ $$ |   $$ |     $$ |        $$ /  \__|$$ |$$  /   $$ |  $$ |  $$ |      $$ /  \__|\$$\ $$  / $$ /  \__|  $$ |   $$ |      $$$$\  $$$$ |
+$$$$$$$$ |$$ $$\$$ |   $$ |     $$ |        \$$$$$$\  $$$$$  /    $$ |  $$ |  $$ |      \$$$$$$\   \$$$$  /  \$$$$$$\    $$ |   $$$$$\    $$\$$\$$ $$ |
+$$  __$$ |$$ \$$$$ |   $$ |     $$ |         \____$$\ $$  $$<     $$ |  $$ |  $$ |       \____$$\   \$$  /    \____$$\   $$ |   $$  __|   $$ \$$$  $$ |
+$$ |  $$ |$$ |\$$$ |   $$ |     $$ |        $$\   $$ |$$ |\$$\    $$ |  $$ |  $$ |      $$\   $$ |   $$ |    $$\   $$ |  $$ |   $$ |      $$ |\$  /$$ |
+$$ |  $$ |$$ | \$$ |   $$ |   $$$$$$\       \$$$$$$  |$$ | \$$\ $$$$$$\ $$$$$$$  |      \$$$$$$  |   $$ |    \$$$$$$  |  $$ |   $$$$$$$$\ $$ | \_/ $$ |
+\__|  \__|\__|  \__|   \__|   \______|       \______/ \__|  \__|\______|\_______/        \______/    \__|     \______/   \__|   \________|\__|     \__|
+
+FUCK OF MY CODE SKID YOU WONT GET SHIT HERE
+FUCK OF MY CODE SKID YOU WONT GET SHIT HERE
+FUCK OF MY CODE SKID YOU WONT GET SHIT HERE
+FUCK OF MY CODE SKID YOU WONT GET SHIT HERE
+
+local _0x5f3e7 = "1 Hand Jerk"
+local _0x3f2e9 = getgenv().KEEP_ON_DEATH
+
+local _0x48f3e = game.Players.LocalPlayer
+local _0x4b7a1 = _0x48f3e.Character or _0x48f3e.CharacterAdded:Wait()
+local _0x6a2be = _0x4b7a1:WaitForChild("Humanoid", 1)
+local _0x9d4c6 = _0x4b7a1:WaitForChild("HumanoidRootPart", 1) or _0x4b7a1.PrimaryPart
+
+if not _0x4b7a1:FindFirstChild("Torso") then
+    warn("Must be R6")
+    return
+end
+
+if getgenv().ToolExecuted then
+    warn("Already executed")
+    return
+end
+
+getgenv().ToolExecuted = true
+
+local _0x775c3 = {
+    _0x3e0f5 = "rbxassetid://99198989",
+}
+
+local _0x7acbf = false
+
+local _0x214ac = Instance.new("Tool")
+_0x214ac.Name = _0x5f3e7
+_0x214ac.RequiresHandle = false
+_0x214ac.Parent = game:GetService("ReplicatedStorage")
+
+_0x48f3e.CharacterAdded:Connect(function()
+    _0x4b7a1 = _0x48f3e.Character
+    _0x6a2be = _0x4b7a1:WaitForChild("Humanoid", 1)
+    _0x9d4c6 = _0x4b7a1:WaitForChild("HumanoidRootPart", 1) or _0x4b7a1.PrimaryPart
+
+    if _0x3f2e9 then
+        local _0x51a8a = _0x214ac:Clone()
+        _0x51a8a.Parent = _0x48f3e.Backpack
+        
+        _0x51a8a.Equipped:Connect(function()
+            _0x7acbf = true
+        end)
+
+        _0x51a8a.Unequipped:Connect(function()
+            _0x7acbf = false
+        end)
+    end
+
+    _0x6a2be.Died:Connect(function()
+        _0x7acbf = false
+        if not _0x3f2e9 then
+            getgenv().ToolExecuted = false
+        end
+    end)
+end)
+
+local _0x51a8a = _0x214ac:Clone()
+_0x51a8a.Parent = _0x48f3e.Backpack
+
+_0x51a8a.Equipped:Connect(function()
+    _0x7acbf = true
+end)
+
+_0x51a8a.Unequipped:Connect(function()
+    _0x7acbf = false
+end)
+
+_0x6a2be.Died:Connect(function()
+    _0x7acbf = false
+    if not _0x3f2e9 then
+        getgenv().ToolExecuted = false
+    end
+end)
+
+local _0x8b3d6
+local _0x8f2a9 = true
+
+game:GetService("RunService").RenderStepped:Connect(function()
+    if not _0x6a2be then
+        return
+    end
+    if _0x7acbf then
+        _0x8f2a9 = true
+        _0x6a2be.WalkSpeed = 0
+        _0x6a2be.JumpPower = 0
+
+        if not _0x8b3d6 then
+            local _0x2c7b8 = Instance.new("Animation")
+            _0x2c7b8.AnimationId = _0x775c3._0x3e0f5
+            _0x8b3d6 = _0x6a2be:LoadAnimation(_0x2c7b8)
+            _0x8b3d6.Looped = true
+            _0x8b3d6:Play()
+        end
+    elseif _0x8f2a9 then
+        _0x8f2a9 = false
+        _0x6a2be.WalkSpeed = 16
+        _0x6a2be.JumpPower = 50
+        if _0x8b3d6 then
+            _0x8b3d6:Stop()
+            _0x8b3d6 = nil
+        end
+    end
+end)
+
+print("Spectral X V2 Jerk Off Animation Loaded Successfully!")
+
